@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+   
+    background: -webkit-linear-gradient(
+        left,
+        rgb(50, 248, 238) 0%,
+        rgba(241, 111, 92, 1) 0%,
+        rgb(23, 240, 193) 0%,
+        rgb(175, 0, 228) 38%,
+        rgb(6, 9, 223) 100%
+      );
+      overflow: hidden;
+      font-family: "Livvic", sans-serif;
+}

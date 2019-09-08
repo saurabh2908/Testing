@@ -1,0 +1,16 @@
+
+<div class="form">
+    ENTER YOUR  DETAILS
+<form  class="form-tag"  [formGroup]="regiterForm" (submit)="doRegister()">
+  <div formGroupName="userInfo">
+  <input id="input-first" type="text" formControlName="username" class="form-control" placeholder="type your name"><br>
+  <input id="input-second" type="text" formControlName="email" class="form-control" placeholder="type your email"><br>&nbsp;&nbsp;
+  <a  routerLink="/edu" routerLinkActive="myclass" [routerLinkActiveOptions]="{exact:true}">NEXT---></a> 
+  <span class="alert-danger" *ngIf="!regiterForm.get('userInfo.username').valid
+  && regiterForm.get('userInfo.username').touched && regiterForm.get('userInfo.username').pristine">UserName can't be blank!</span>
+  <span class="alert-danger" *ngIf="regiterForm.get('userInfo.username').invalid && regiterForm.get('userInfo.username').errors['blackListed']">UserName Is BlackListed !</span>
+
+</div> 
+</form>
+<router-outlet></router-outlet>
+</div>
