@@ -1,23 +1,25 @@
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserroutesModule } from './userRoutes/userInfo/user.module'
+// import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './auth.guard';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, routingComponents
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserroutesModule,
-    ReactiveFormsModule, FormsModule
+    HttpClientModule,
+    
+
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
